@@ -8,9 +8,6 @@ import PlayerDetail from "./PlayerComponent";
 
 
 class Main extends React.Component{
-    constructor(){
-        super();
-    }
 
     render(){
         const SearchPage = () => {
@@ -43,10 +40,3 @@ class Main extends React.Component{
 }
 
 export default withRouter(Main);
-
-{/* <Route path='/home' render={props =>
-    <div>
-        <SearchPage />
-        <ResultsPage />
-    </div>
-    } /> */}

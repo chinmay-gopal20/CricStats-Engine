@@ -32,20 +32,20 @@ class SearchBox extends React.Component{
                 <Form style={{"padding": "50px"}}>
                     <FormGroup style={{"padding": "20px"}} onChange={this.handleChange}>
                         <Row>
-                            <Label htmlFor="queryString" style={{"textAlign": "left"}}>Query String </Label>
+                            <Label htmlFor="queryString" style={{"textAlign": "left", "margin-left":"auto", "margin-right":"auto"}}>Query String </Label>
                         </Row>
                         <Row>
                             <Input type="text" name="queryString" id="queryString" 
-                                placeholder="Query String [Example: top-order batsman]" style={{width: "500px", height: "35px", "borderRadius": 10}}/>
+                                placeholder="Query String [Example: top-order batsman]" style={{"margin-left":"auto", "margin-right":"auto", width: "500px", height: "35px", "borderRadius": 10}}/>
                         </Row>
                     </FormGroup>
-                    <FormGroup style={{"padding": "0px 0px 20px 0px"}} onChange={this.handleChange}>
+                    <FormGroup style={{"padding": "20px"}} onChange={this.handleChange}>
                         <Row>
-                            <Label htmlFor="totalResults">Total Results [Number] </Label>
+                            <Label htmlFor="totalResults" style={{"textAlign": "left", "margin-left":"auto", "margin-right":"auto"}}>Total Results [Number] </Label>
                         </Row>
                         <Row>
                             <Input type="text" name="totalResults" id="totalResults" 
-                                placeholder="Number of search results [Example: 333]" style={{width: "500px", height: "35px", "borderRadius": 10}}/>
+                                placeholder="Number of search results [Example: 333]" style={{"margin-left":"auto", "margin-right":"auto", width: "500px", height: "35px", "borderRadius": 10}}/>
                         </Row>
                     </FormGroup>
                     <Link to={`/search/${this.state.queryString}/${this.state.totalResults}`}>
