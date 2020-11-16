@@ -1,0 +1,24 @@
+{
+  "name": "cricstats-engine-interface",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "mdbreact": "^4.27.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-fontawesome": "^1.7.1",
+    "react-native": "^0.63.3",
+    "react-native-elements": "^3.0.0-alpha.1",
+    "react-native-vector-icons": "^7.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "1.1.4",
+    "reactstrap": "^8.7.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
