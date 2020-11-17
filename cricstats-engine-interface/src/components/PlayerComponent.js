@@ -22,14 +22,18 @@ class PlayerDetail extends Component{
     componentDidMount(){
         fetchAPI(this.state.player)
             .then(result => result)
-            .then(result => this.state.playerStats = result)
-            .then(() => console.log('player component - ', this.state.playerStats));
+            .then(result => this.setState({
+                playerStats: result
+            }, () => {
+                console.log('search results - ', typeof(result['players']));
+            }))
     }
 
     render(){
         return(
             <Container className="player-stats">
-                <h1>{this.state.player}</h1>
+                <h1>{this.state.playerStats['name']}</h1>
+                <img src={this.state.playerStats['image_url']} alt={this.state.playerStats['name']} />
             </Container>
         )
     }

@@ -3,7 +3,7 @@ import { Card, CardBody, CardImg, CardTitle, CardSubtitle, Container, Row, Col }
 import { Link } from 'react-router-dom';
 
 function RenderPlayerCard({player}){
-    const playerName = player.name.toLowerCase().replace(' ', '-')
+    const playerName = player.name.toLowerCase().replace(' ', '-');
     return (
         <Card style={{'flex': 3, 'background': 'white', 'width': '10rem', 'borderColor': 'black', 'borderWidth': 10}}>
             <Link to={`/player/${playerName}`}>
@@ -57,7 +57,7 @@ class Results extends React.Component{
         // console.log('search results inside render - ', this.state.searchResults);
         const player = Array.from(this.state.players).map((each) => {
             return(
-                <Col md={4}>
+                <Col md={4}  key={each.name.toLowerCase().replace(' ', '-')}>
                     <RenderPlayerCard player={each} />
                 </Col>
             )
@@ -65,10 +65,6 @@ class Results extends React.Component{
 
         return(
             <Container className="results">
-                <div className="row">
-                    <hr style={{'height': '1px', 'backgroundColor': 'rgb(111, 224, 158)'}} />
-                    <br></br>
-                </div>
                 <div className="col-12">
                     <h2><b><i>Query String - {this.state.queryString}</i></b></h2>
                     <h3><b><i>Total Search Results - {this.state.count}</i></b></h3>
