@@ -187,7 +187,7 @@ class PlayerDetail extends Component{
                         </div>;
         
         const personalInfo = <div>
-                                <Table dark>
+                                <Table dark bordered>
                                     <tbody>
                                         <tr>
                                             <td> Country </td>
@@ -303,6 +303,87 @@ class PlayerDetail extends Component{
                                 </Table>
                             </div>;
 
+        const bowlingStats =  <div>
+                                <Table bordered>
+                                    <thead>
+                                        <tr>
+                                            <th> Bowling</th>
+                                            <th> T20I</th>
+                                            <th> ODI </th>
+                                            <th> Test </th>
+                                            <th> IPL </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> Innings Played </td>
+                                            <td> {this.currentPlayer.stats.twenty20 ? this.currentPlayer.stats.twenty20.bowling.overall.innings : '-'} </td>
+                                            <td> {this.currentPlayer.stats.odi ? this.currentPlayer.stats.odi.bowling.overall.innings : '-'}</td>
+                                            <td> {this.currentPlayer.stats.test ? this.currentPlayer.stats.test.bowling.overall.innings : '-'}</td>
+                                            <td> {this.currentPlayer.stats.ipl ? this.currentPlayer.stats.ipl.bowling.overall.innings : '-'}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Overs </td>
+                                            <td> {this.currentPlayer.stats.twenty20 ? this.currentPlayer.stats.twenty20.bowling.overall.overs : '-'} </td>
+                                            <td> {this.currentPlayer.stats.odi ? this.currentPlayer.stats.odi.bowling.overall.overs : '-'}</td>
+                                            <td> {this.currentPlayer.stats.test ? this.currentPlayer.stats.test.bowling.overall.overs : '-'}</td>
+                                            <td> {this.currentPlayer.stats.ipl ? this.currentPlayer.stats.ipl.bowling.overall.overs : '-'}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Wickets </td>
+                                            <td> {this.currentPlayer.stats.twenty20 ? this.currentPlayer.stats.twenty20.bowling.overall.wickets : '-'} </td>
+                                            <td> {this.currentPlayer.stats.odi ? this.currentPlayer.stats.odi.bowling.overall.wickets : '-'}</td>
+                                            <td> {this.currentPlayer.stats.test ? this.currentPlayer.stats.test.bowling.overall.wickets : '-'}</td>
+                                            <td> {this.currentPlayer.stats.ipl ? this.currentPlayer.stats.ipl.bowling.overall.wickets : '-'}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Runs Conceeded </td>
+                                            <td> {this.currentPlayer.stats.twenty20 ? this.currentPlayer.stats.twenty20.bowling.overall.runs : '-'} </td>
+                                            <td> {this.currentPlayer.stats.odi ? this.currentPlayer.stats.odi.bowling.overall.runs : '-'}</td>
+                                            <td> {this.currentPlayer.stats.test ? this.currentPlayer.stats.test.bowling.overall.runs : '-'}</td>
+                                            <td> {this.currentPlayer.stats.ipl ? this.currentPlayer.stats.ipl.bowling.overall.runs : '-'}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Strike Rate </td>
+                                            <td> {this.currentPlayer.stats.twenty20 ? this.currentPlayer.stats.twenty20.bowling.overall.sr : '-'} </td>
+                                            <td> {this.currentPlayer.stats.odi ? this.currentPlayer.stats.odi.bowling.overall.sr : '-'}</td>
+                                            <td> {this.currentPlayer.stats.test ? this.currentPlayer.stats.test.bowling.overall.sr : '-'}</td>
+                                            <td> {this.currentPlayer.stats.ipl ? this.currentPlayer.stats.ipl.bowling.overall.sr : '-'}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Average </td>
+                                            <td> {this.currentPlayer.stats.twenty20 ? this.currentPlayer.stats.twenty20.bowling.overall.avg : '-'} </td>
+                                            <td> {this.currentPlayer.stats.odi ? this.currentPlayer.stats.odi.bowling.overall.avg : '-'}</td>
+                                            <td> {this.currentPlayer.stats.test ? this.currentPlayer.stats.test.bowling.overall.avg : '-'}</td>
+                                            <td> {this.currentPlayer.stats.ipl ? this.currentPlayer.stats.ipl.bowling.overall.avg : '-'}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Economy </td>
+                                            <td> {this.currentPlayer.stats.twenty20 ? this.currentPlayer.stats.twenty20.bowling.overall.economy : '-'} </td>
+                                            <td> {this.currentPlayer.stats.odi ? this.currentPlayer.stats.odi.bowling.overall.economy : '-'}</td>
+                                            <td> {this.currentPlayer.stats.test ? this.currentPlayer.stats.test.bowling.overall.economy : '-'}</td>
+                                            <td> {this.currentPlayer.stats.ipl ? this.currentPlayer.stats.ipl.bowling.overall.economy : '-'}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> 5-fers </td>
+                                            <td> {this.currentPlayer.stats.twenty20 ? this.currentPlayer.stats.twenty20.bowling.overall["5W"] : '-'} </td>
+                                            <td> {this.currentPlayer.stats.odi ? this.currentPlayer.stats.odi.bowling.overall["5W"] : '-'}</td>
+                                            <td> {this.currentPlayer.stats.test ? this.currentPlayer.stats.test.bowling.overall["5W"] : '-'}</td>
+                                            <td> {this.currentPlayer.stats.ipl ? this.currentPlayer.stats.ipl.bowling.overall["5W"] : '-'}</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Best Bowling in an Innings </td>
+                                            <td> {this.currentPlayer.stats.twenty20 ? this.currentPlayer.stats.twenty20.bowling.overall.bbi : '-'} </td>
+                                            <td> {this.currentPlayer.stats.odi ? this.currentPlayer.stats.odi.bowling.overall.bbi : '-'}</td>
+                                            <td> {this.currentPlayer.stats.test ? this.currentPlayer.stats.test.bowling.overall.bbi : '-'}</td>
+                                            <td> {this.currentPlayer.stats.ipl ? this.currentPlayer.stats.ipl.bowling.overall.bbi : '-'}</td>
+                                        </tr>
+                                    </tbody>
+                                </Table>
+                            </div>;
+
+        console.log(this.currentPlayer.stats.twenty20);
+
         return(
             <div className="app" style={{"margin-left":"10px"}}> 
                 <br/> 
@@ -317,6 +398,10 @@ class PlayerDetail extends Component{
                 <div style={{"margin-left":"350px", "margin-right":"500px"}}> 
                     <h2 className="text-left"> Batting Stats </h2>  
                     {battingStats}
+                </div>
+                <div style={{"margin-left":"350px", "margin-right":"500px"}}> 
+                    <h2 className="text-left"> Bowling Stats </h2>  
+                    {bowlingStats}
                 </div>
             </div>
         )
