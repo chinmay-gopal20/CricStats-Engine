@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function RenderPlayerCard({player}){
     const playerName = player.name.toLowerCase().replace(' ', '-');
     return (
-        <Card style={{'flex': 3, 'background': 'white', 'width': '10rem', 'borderColor': 'black', 'borderWidth': 10}}>
+        <Card style={{'flex': 1, 'background': 'white', 'width': '10rem', 'borderWidth': 5}}>
             <Link to={`/player/${playerName}`}>
                 <CardImg width="100%" src={player.image} alt={player.name}/>
                 <CardBody>
@@ -57,7 +57,7 @@ class Results extends React.Component{
         // console.log('search results inside render - ', this.state.searchResults);
         const player = Array.from(this.state.players).map((each) => {
             return(
-                <Col md={4}  key={each.name.toLowerCase().replace(' ', '-')}>
+                <Col md={2}  key={each.name.toLowerCase().replace(' ', '-')}>
                     <RenderPlayerCard player={each} />
                 </Col>
             )
@@ -71,53 +71,12 @@ class Results extends React.Component{
                     <br></br>
                     <br></br>
                 </div>
-                <Row style={{'display': 'flex', 'flexDirection': 'row', 'gap': '75px', 'paddingLeft': '125px',
-                            'flexWrap': 'wrap'}}>
+                <Row style={{'display': 'flex', 'flexDirection': 'row', 'gap': '50px', 'flexWrap': 'wrap', 'paddingLeft': '150px'}}>
                     {player}
                 </Row>
             </Container>       
         )
     }
 }
-
-
-// const Results = (props) => {
-//     const queryString = props.queryString;
-//     const totalResults = props.totalResults;
-
-//     var searchResults;
-    // fetchAPI(queryString, totalResults)
-    //     .then(result => searchResults = result)
-    //     .then(() => console.log(searchResults));
-
-    // console.log('search results - ', searchResults);
-    // const player = searchResults.map((each) => {
-    //     return(
-    //         <Col md={4}>
-    //             <RenderPlayerCard player={each} />
-    //         </Col>
-    //     )
-    // })
-
-//     return(
-        // <Container className="results">
-        //     <div className="row">
-        //         <hr style={{'height': '1px', 'backgroundColor': 'rgb(111, 224, 158)'}} />
-        //         <br></br>
-        //     </div>
-        //     <div className="col-12">
-        //         <h2><b><i>Query String - {queryString}</i></b></h2>
-        //         <h3><b><i>Total Search Results - {totalResults}</i></b></h3>
-        //         <br></br>
-        //         <br></br>
-        //     </div>
-        //     <Row style={{'display': 'flex', 'flexDirection': 'row', 'gap': '75px', 'paddingLeft': '125px',
-        //                 'flexWrap': 'wrap'}}>
-        //         {player}
-        //     </Row>
-        // </Container>
-//     )
-
-// }
 
 export default Results;
