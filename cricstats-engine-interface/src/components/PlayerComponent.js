@@ -34,6 +34,30 @@ class PlayerDetail extends Component{
             )
         }
         
+
+        const teams_played_for = <div>
+                                    <Table bordered>
+                                        <tbody>
+                                            <tr>
+                                                <td><b> TEST </b></td>
+                                                <td>{this.state.playerStats.stats.test.teams_played_for}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b> ODI </b></td>
+                                                <td>{this.state.playerStats.stats.odi.teams_played_for}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b> T20I </b></td>
+                                                <td>{this.state.playerStats.stats.t20i.teams_played_for}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b> TWENTY20 </b></td>
+                                                <td>{this.state.playerStats.stats.twenty20.teams_played_for}</td>
+                                            </tr>
+                                        </tbody>
+                                    </Table>
+                                </div>
+
         const playerInfo = <div> 
                             <br/>
                             <div className="container">
@@ -251,6 +275,11 @@ class PlayerDetail extends Component{
                 <div> 
                     <h2 style={{"margin-left":"50px"}}><b> PLAYER INFORMATION </b></h2>
                     {playerInfo}  
+                </div>
+                <br/> 
+                <div style={{"margin-left":"500px", "margin-right":"350px"}}> 
+                    <h2 className="text-center" style={{"margin-left":"50px"}}> Teams Played For </h2>
+                    {teams_played_for}  
                 </div>
                 <br/> 
                 <div style={{"margin-left":"500px", "margin-right":"350px"}}> 
