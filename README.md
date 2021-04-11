@@ -6,10 +6,9 @@ CricStats Engine is a query based search engine that is desinged to carry out cr
 
 We have a list of 250 players, over which our search engine searches and retrieves results for user queries. The players data are scraped using selenium from two websites. 
   
-  ```bash
-  Players bio data, profile summary and profile image are scraped from [cricbuzz](https://www.cricbuzz.com/).
-  Players statistics are scraped from [cricmetric[ (http://www.cricmetric.com/index.py)
-  ```
+ * Players bio data, profile summary and profile image are scraped from [cricbuzz](https://www.cricbuzz.com/).
+ * Players statistics are scraped from [cricmetric[ (http://www.cricmetric.com/index.py)
+  
 The scraped data are stored in local as player_name.csv. The data are indexed using [Whoosh](https://pypi.org/project/Whoosh/) which is a indexing and searching. The data retireved by using ranking and querying technique provided by Whoosh. Which makes searching faster.
 
 
