@@ -18,10 +18,11 @@ The scraped data are stored in local as player_name.csv. The data are indexed us
 Query - Top order Batsman, 
 Number of results - 25
 ```
+### Search page & Results page
 
 ![results-page](https://user-images.githubusercontent.com/43880647/114308788-9e1ef180-9b02-11eb-9346-e4c708bdeae9.gif)
 
-## Search Results page:
+### Players page:
 
 ![players-page](https://user-images.githubusercontent.com/43880647/114309581-403fd900-9b05-11eb-93c2-a9354c7c493b.gif)
 
